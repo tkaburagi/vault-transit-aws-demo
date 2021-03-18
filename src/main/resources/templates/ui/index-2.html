@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html xmlns:th="http:///www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <title>Vault Demo</title>
+</head>
+
+<img th:src="@{/api/image/non-decrypted}" />
+
+<h3>複合化されていないので表示できません 🤗</h3>
+<br>
+[[${ciphertext}]]
+</body>
+</html>

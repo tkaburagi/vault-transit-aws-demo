@@ -1,0 +1,23 @@
+spring:
+  config:
+    import: vault://
+  application:
+    name: vault-demo
+  cloud:
+    vault:
+      token: (TOKEN FOR SECRET ID)
+      authentication: APPROLE
+      app-role:
+        role: read-s3
+        role-id: (ROLE ID)
+      scheme: https
+      host: (VAULT ADDR)
+      port: 8200
+      namespace: admin
+      aws:
+        enabled: true
+        role: read-s3
+        backend: aws
+        access-key-property: cloud.aws.credentials.accessKey
+        secret-key-property: cloud.aws.credentials.secretKey
+
